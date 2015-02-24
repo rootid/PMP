@@ -1,11 +1,11 @@
 #!/bin/bash
-
-#Monitor the process with the process name
+#Monitor the process with the process name 
 process_name=$1
+[ $process_name ]  || process_name='java'
 nsamples=1
 sleeptime=0
-#pid=$(pidof mysqld)
 pid=$(pidof ${process_name})
+#pid=$(pidof mysqld)
 
 for x in $(seq 1 $nsamples)
   do
