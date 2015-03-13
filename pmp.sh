@@ -1,7 +1,7 @@
 #!/bin/bash
 #Monitor the process with the process name 
 process_name=$1
-[ $process_name ]  || process_name='java'
+[ $process_name ]  || process_name='mysql'
 nsamples=1
 sleeptime=0
 pid=$(pidof ${process_name})
